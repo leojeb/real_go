@@ -1,5 +1,6 @@
 package main
 
+// 每次都是print(2), 因为i的值变化了, 而且i只有一次定义
 func a() (s []func()) {
 	for i := 0; i < 2; i++ {
 		println(i)
