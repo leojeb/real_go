@@ -1,0 +1,34 @@
+{
+  "_id": "COROLLA-341-fusion_lidar_points-base_link-16394712585068.npy",
+  "channel_name": "/fusion/lidar_points",
+  "clip": [
+    "971a94b057179621f6b321f70f675869"
+  ],
+  "frame_id": "/base_link",
+  "from_bag": "20211214142129",
+  "global": "85b1303002c71cd91b07a3b04b538a65",
+  "pose": {
+    "x": 349894.78846195684,
+    "y": 3451690.3110540938,
+    "z": 14.347090431486018,
+    "yaw": -2.0272119013880308,
+    "pitch": -0.025451365197422415,
+    "roll": -0.014623871892602464
+  },
+  "sequence": 4292,
+  "tf": {
+    "translation": [
+      0,
+      0,
+      0
+    ],
+    "rotation": [
+      0,
+      0,
+      0
+    ]
+  },
+  "timestamp": {
+    "$numberLong": "1639471257985068032"
+  }
+}

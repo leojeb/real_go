@@ -14,7 +14,7 @@ func CheckError(err error) {
 
 func main() {
 	fmt.Println(os.Getwd())
-	inputFile, _ := os.Open("clip1.json")
+	inputFile, _ := os.Open("1.clip")
 	//CheckError(inputError)
 
 	defer func() { inputFile.Close() }()
