@@ -41,7 +41,7 @@ func main() {
 	a1.Area()
 	a2.Area()
 
-	// 实际上可以直接赋值, 无需显示转换
+	// 可以直接赋值转换
 	a0 := Shaper(s)
 	var a3 Shaper = r
 	a0.Area()

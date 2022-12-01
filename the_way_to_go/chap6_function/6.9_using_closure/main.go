@@ -7,6 +7,11 @@ import (
 	"time"
 )
 
+var where = func() {
+	_, file, line, _ := runtime.Caller(1)
+	log.Printf("%s:%d", file, line)
+}
+
 func main() {
 	// 计算函数执行时间
 	start := time.Now()
@@ -19,10 +24,7 @@ func main() {
 	*/
 
 	// 使用闭包调试, 可以通过runtime包, 获取代码执行的文件路径和行数等信息
-	where := func() {
-		_, file, line, _ := runtime.Caller(1)
-		log.Printf("%s:%d", file, line)
-	}
+
 	where()
 	println("哔哔哔")
 	where()
@@ -54,8 +56,10 @@ func Add2(a int) func(b int) int {
 }
 
 func Adder() func(int) int {
+	where()
 	var x int
 	return func(i int) int {
+		where()
 		x += i
 		return x
 	}

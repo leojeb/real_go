@@ -2,10 +2,8 @@ package main
 
 import (
 	"context"
-	"os"
 	"runtime"
 	"sync"
-	"time"
 )
 
 func task1() {
@@ -98,25 +96,25 @@ func c() { println("c") }
 
 func main() {
 	//task1()
-	//task2()
+	task2()
 	//task3()
 	//task4()
 	//task5()
-	task6()
-	var q = make(chan struct{})
-	go func() {
-		defer close(q)
-		defer println("done")
-		time.Sleep(time.Second)
-		println("这行会执行")
-	}()
-	<-q
-	// 这里是 通信方式的等待, 所以上面的goroutine会执行, 而下面的不会
-	//runtime.Goexit() // 等其他执行完后, 崩溃进程
-	go func() {
-		println("122")
-	}()
-	defer println('1')
-	os.Exit(-1) // 什么都不等, 直接退出
+	//task6()
+	//var q = make(chan struct{})
+	//go func() {
+	//	defer close(q)
+	//	defer println("done")
+	//	time.Sleep(time.Second)
+	//	println("这行会执行")
+	//}()
+	//<-q
+	//// 这里是 通信方式的等待, 所以上面的goroutine会执行, 而下面的不会
+	////runtime.Goexit() // 等其他执行完后, 崩溃进程
+	//go func() {
+	//	println("122")
+	//}()
+	//defer println('1')
+	//os.Exit(-1) // 什么都不等, 直接退出
 
 }

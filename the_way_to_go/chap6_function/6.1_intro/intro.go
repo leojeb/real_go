@@ -8,7 +8,7 @@ func main() {
 	/*
 		go不支持函数重载
 	*/
-	//函数可以生命使用
+	//函数可以声明使用
 
 	var f1 binOp = func(i int, i2 int) int {
 		fmt.Println(i + i2)
