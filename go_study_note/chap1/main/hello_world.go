@@ -1,7 +1,7 @@
 package main
 
 import (
-	. "go_project0/chap1"
+	. "go_project0/go_study_note/chap1"
 	"math"
 	. "unsafe"
 )
